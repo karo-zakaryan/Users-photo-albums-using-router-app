@@ -1,6 +1,8 @@
 import React, { Component, Fragment } from 'react';
-import { Route, NavLink } from 'react-router-dom';
+import { Route } from 'react-router-dom';
+import ReactLoading from 'react-loading';
 import Albums from '../Albums/Albums';
+import User from '../../../components/User/User';
 
 import "./Users.css";
 
@@ -23,13 +25,14 @@ export default class Users extends Component {
     let users;
     (this.state.users) 
         ?
-        users = this.state.users.map(user => {
-            return <li key={user.id} className="User"> 
-                        <NavLink to={"/users/" + user.id + "/albums"}>{user.name}</NavLink> 
-                    </li>
-        })
+        users = this.state.users.map(user => (
+            <User 
+                key={user.id}
+                id={user.id} 
+                name={user.name}/> 
+        ))
         : 
-        users = null
+        users = <ReactLoading type="spokes" color="red" width="50px"height="50px" />
     
     return (
         <Fragment>

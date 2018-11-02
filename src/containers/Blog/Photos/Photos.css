@@ -1,0 +1,15 @@
+.Photos {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-content: center;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+.Photo {
+    margin: 0;
+	padding: 1%;
+    width: 200px;
+    word-wrap: break-word;
+}

@@ -1,12 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-
-import "./Album.css";
+import { NavLink } from 'react-router-dom';
 
 const Album = (props) => (
                 <li className="Album"> 
-                    <Link to={"/albums/" + props.id + "/photos"}>{props.title}</Link>
-                    {/* <Route path={"/users/" + props.id} render={() => <Albums userId={props.id} /> } /> */}
+                    <NavLink to={"/users/" + props.userId + "/albums/" + props.id}>
+                        {props.title}
+                    </NavLink>
                 </li>
 );
 
