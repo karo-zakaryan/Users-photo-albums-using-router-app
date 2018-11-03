@@ -32,7 +32,7 @@ export default class Users extends Component {
                 name={user.name}/> 
         ))
         : 
-        users = <ReactLoading type="spokes" color="red" width="50px"height="50px" />
+        users = <ReactLoading type="spokes" color="red" width="50px" height="50px" />
     
     return (
         <Fragment>

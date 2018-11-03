@@ -1,8 +1,7 @@
 .Albums {
-    width: 570px;
+    width: 600px;
     display: inline-block;
     float: right;
-    margin-right: 85px;
 }
 
 .Albums h1 {
